@@ -1,3 +1,4 @@
+import { Builder } from "./_components/builder";
 import { Featured } from "./_components/featured";
 import { Hero } from "./_components/hero";
 import { HowItWorks } from "./_components/how-it-works";
@@ -12,6 +13,7 @@ export default function Home() {
       <Hero className="bg-black text-white" />
       <HowItWorks />
       <Featured className="bg-black text-white" />
+      <Builder />
     </main>
   );
 }
