@@ -1,9 +1,10 @@
 import Image from "next/image";
 
-import { ArrowUpRight } from "lucide-react";
+import { Phone } from "lucide-react";
 
 import { IconArmy } from "@/components/assets/army";
 import HeroPc from "@/components/assets/hero-pc.png";
+import { IconPc } from "@/components/assets/pc";
 import { Badge } from "@/components/ui/badge";
 import { PrimaryButton } from "@/components/ui/custom/primary-button";
 import { cn } from "@/lib/utils";
@@ -17,7 +18,7 @@ export const Hero = ({ className }: { className?: string }) => {
         "flex flex-col items-center justify-center gap-10 pt-9"
       )}
     >
-      <div className="container flex flex-col items-center justify-center gap-3 text-center">
+      <div className="container relative z-10 flex flex-col items-center justify-center gap-3 text-center">
         <Badge className="relative z-10 gap-2.5">
           <div className="size-[30px] overflow-hidden rounded-full bg-brand">
             <IconArmy />
@@ -40,17 +41,20 @@ export const Hero = ({ className }: { className?: string }) => {
           you&apos;ve always wanted, tailored to your needs and budget.
         </p>
       </div>
-      <div className="flex w-fit items-center gap-4">
-        <PrimaryButton href="/" className="bg-white text-black">
+      <div className="relative z-10 flex w-fit items-center gap-4">
+        <PrimaryButton
+          href="/"
+          className="bg-white text-black hover:bg-white/90"
+        >
           Build Your Dream PC
           <div className="flex size-10 items-center justify-center rounded-full bg-brand">
-            <ArrowUpRight />
+            <IconPc />
           </div>
         </PrimaryButton>
         <PrimaryButton href="/">
           Contact us
-          <div className="flex size-10 items-center justify-center rounded-full bg-brand">
-            <ArrowUpRight />
+          <div className="flex size-10 items-center justify-center rounded-full bg-black">
+            <Phone className="size-4" />
           </div>
         </PrimaryButton>
       </div>
