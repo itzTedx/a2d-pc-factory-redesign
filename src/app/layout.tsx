@@ -1,9 +1,10 @@
+import type { Metadata } from "next";
+
+import { Navbar } from "@/components/layout/navbar";
 import { clashDisplay } from "@/fonts";
 import { cn } from "@/lib/utils";
-import type { Metadata } from "next";
+
 import "./globals.css";
-
-
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -17,9 +18,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={cn('antialiased', clashDisplay.className)}
-      >
+      <body className={cn("antialiased", clashDisplay.className)}>
+        <Navbar />
         {children}
       </body>
     </html>
